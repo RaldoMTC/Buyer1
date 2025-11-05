@@ -1,1 +1,15 @@
-{}
+{
+  "users": [
+    {
+      "user_id": "user_1762339432865_e57d3e58",
+      "session_id": "09c93a8c-cf11-4e5a-b0ec-67d0d19e3205",
+      "device_id": "ca3087bffaaaa321",
+      "device_model": "Infinix X6532",
+      "android_version": "14",
+      "login_time": "2025-11-05 19:09:32",
+      "app_version": "1.0",
+      "is_first_launch": false
+    }
+  ],
+  "last_updated": "2025-11-05 19:09:33"
+}
