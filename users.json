@@ -439,7 +439,17 @@
       "login_time": "2025-11-06 00:35:21",
       "app_version": "1.0",
       "is_first_launch": true
+    },
+    {
+      "user_id": "user_1762407321147_7988ae46",
+      "session_id": "05cf8b54-ed5a-45fc-a792-5c4d0f664b69",
+      "device_id": "84c9b18a0a86f296",
+      "device_model": "Huawei Enjoy 9s",
+      "android_version": "8.1.0",
+      "login_time": "2025-11-06 00:36:13",
+      "app_version": "1.0",
+      "is_first_launch": false
     }
   ],
-  "last_updated": "2025-11-06 00:35:21"
+  "last_updated": "2025-11-06 00:36:14"
 }
