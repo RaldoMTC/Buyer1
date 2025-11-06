@@ -539,7 +539,17 @@
       "login_time": "2025-11-06 14:41:49",
       "app_version": "1.0",
       "is_first_launch": false
+    },
+    {
+      "user_id": "user_1762411275760_7a4634d2",
+      "session_id": "3cd02e61-f30f-4028-a2d9-c2c2c96e786c",
+      "device_id": "a1a6c4c9be5e309b",
+      "device_model": "SM-G9200",
+      "android_version": "9",
+      "login_time": "2025-11-06 14:41:53",
+      "app_version": "1.0",
+      "is_first_launch": false
     }
   ],
-  "last_updated": "2025-11-06 14:41:50"
+  "last_updated": "2025-11-06 14:41:55"
 }
