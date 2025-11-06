@@ -479,7 +479,17 @@
       "login_time": "2025-11-06 14:39:37",
       "app_version": "1.0",
       "is_first_launch": true
+    },
+    {
+      "user_id": "user_1762411211600_3dfb02d8",
+      "session_id": "dc68f152-cc34-4f4e-bb03-b9b61d4cafa9",
+      "device_id": "ad1319d96a64f453",
+      "device_model": "vivo X9",
+      "android_version": "9",
+      "login_time": "2025-11-06 14:40:11",
+      "app_version": "1.0",
+      "is_first_launch": true
     }
   ],
-  "last_updated": "2025-11-06 14:39:38"
+  "last_updated": "2025-11-06 14:40:12"
 }
