@@ -749,7 +749,17 @@
       "login_time": "2025-11-07 08:33:06",
       "app_version": "1.0",
       "is_first_launch": true
+    },
+    {
+      "user_id": "user_1762694180180_0dc9a9fa",
+      "session_id": "44c53637-4be9-48b5-9cc2-a3dc36cb835b",
+      "device_id": "28db89f97f4ba257",
+      "device_model": "OnePlus",
+      "android_version": "9",
+      "login_time": "2025-11-09 21:16:20",
+      "app_version": "1.0",
+      "is_first_launch": true
     }
   ],
-  "last_updated": "2025-11-07 08:33:08"
+  "last_updated": "2025-11-09 21:16:21"
 }
