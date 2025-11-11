@@ -11,7 +11,17 @@
       "login_time": "2025-11-11 05:03:14",
       "app_version": "1.0",
       "is_first_launch": false
+    },
+    {
+      "user_id": "user_1762866007367_abcfc6d5",
+      "session_id": "d99ca460-fd78-4f55-9f7f-b37a2cefb98c",
+      "device_id": "4e9b2741c5a0d63a",
+      "device_model": "OnePlus8Pro",
+      "android_version": "11",
+      "login_time": "2025-11-11 05:04:10",
+      "app_version": "1.0",
+      "is_first_launch": false
     }
   ],
-  "last_updated": "2025-11-11 05:03:14"
+  "last_updated": "2025-11-11 05:04:11"
 }
