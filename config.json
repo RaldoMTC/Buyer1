@@ -1,0 +1,9 @@
+{
+  "bot_token": "7680606818",
+  "chat_id": "7680606818",
+  "allowed_users": [
+    "7680606818",
+    "987654321"
+  ],
+  "default_update_text": "Tidak ada update baru."
+}
