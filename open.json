@@ -1,0 +1,6 @@
+{
+  "api_keys": [
+    "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"
+  ],
+  "default_model": "openai/gpt-3.5-turbo"
+}
