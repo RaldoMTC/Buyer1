@@ -3,32 +3,45 @@
     if (window.__RALZZ_DEVTOOLS__) return;
     window.__RALZZ_DEVTOOLS__ = true;
 
-    // ===== UI ROOT =====
-    const root = document.createElement('div');
-    root.style = `
-      position:fixed; bottom:10px; right:10px;
-      width:320px; height:240px;
-      background:#0d1117; color:#c9d1d9;
-      font-family:monospace; font-size:11px;
-      z-index:9999999; border-radius:10px;
-      box-shadow:0 0 10px #000; display:none;
-      overflow:hidden;
-    `;
+    // ===== ROOT =====
+    const root = document.createElement('DarkSilent');
+    root.style.all = "initial";
+    root.style.position = "fixed";
+    root.style.top = "60px";
+    root.style.left = "10px";
+    root.style.width = "320px";
+    root.style.height = "240px";
+    root.style.background = "#0d1117";
+    root.style.color = "#c9d1d9";
+    root.style.fontFamily = "monospace";
+    root.style.fontSize = "11px";
+    root.style.zIndex = "99999999";
+    root.style.borderRadius = "10px";
+    root.style.boxShadow = "0 0 10px #000";
+    root.style.display = "none";
+    root.style.overflow = "hidden";
+    root.style.pointerEvents = "auto";
+
     document.body.appendChild(root);
 
     // ===== HEADER =====
     const header = document.createElement('div');
     header.innerText = "Ralzz Dev";
-    header.style = "background:#161b22;padding:5px;cursor:move;";
+    header.style.padding = "6px";
+    header.style.background = "#161b22";
+    header.style.cursor = "move";
     root.appendChild(header);
 
     // ===== TABS =====
     const tabs = document.createElement('div');
-    tabs.style = "display:flex;background:#21262d;";
+    tabs.style.display = "flex";
+    tabs.style.background = "#21262d";
     root.appendChild(tabs);
 
     const content = document.createElement('div');
-    content.style = "padding:5px;height:180px;overflow:auto;";
+    content.style.padding = "5px";
+    content.style.height = "180px";
+    content.style.overflow = "auto";
     root.appendChild(content);
 
     const panels = {
@@ -45,20 +58,22 @@
     Object.keys(panels).forEach(name => {
       const btn = document.createElement('div');
       btn.innerText = name;
-      btn.style = "flex:1;padding:4px;text-align:center;cursor:pointer;";
-      btn.onclick = () => switchTab(name);
+      btn.style.flex = "1";
+      btn.style.padding = "4px";
+      btn.style.textAlign = "center";
+      btn.style.cursor = "pointer";
+      btn.style.color = "#fff";
+
+      btn.addEventListener('click', () => switchTab(name));
       tabs.appendChild(btn);
     });
 
     switchTab('console');
 
-    // ===== FLOAT BUTTON (FIXED) =====
+    // ===== FLOAT BUTTON =====
     const toggle = document.createElement('div');
     toggle.innerText = "DEV";
-
-    // reset biar ga ketimpa CSS website
     toggle.style.all = "initial";
-
     toggle.style.position = "fixed";
     toggle.style.bottom = "20px";
     toggle.style.left = "20px";
@@ -68,32 +83,39 @@
     toggle.style.borderRadius = "20px";
     toggle.style.fontSize = "14px";
     toggle.style.fontFamily = "sans-serif";
-    toggle.style.zIndex = "99999999";
+    toggle.style.zIndex = "999999999";
     toggle.style.cursor = "pointer";
+    toggle.style.pointerEvents = "auto";
 
-    toggle.onclick = () => {
-      root.style.display = root.style.display === 'none' ? 'block' : 'none';
-    };
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = root.style.display === 'none' || root.style.display === '';
+      root.style.display = isHidden ? 'block' : 'none';
+    });
 
     document.body.appendChild(toggle);
 
-    // ===== DRAG (FIX MOBILE) =====
-    let isDrag = false, offsetX, offsetY;
+    // ===== DRAG (TOUCH FIX) =====
+    let isDrag = false, offsetX = 0, offsetY = 0;
 
-    header.ontouchstart = (e) => {
+    header.addEventListener('touchstart', (e) => {
       isDrag = true;
-      offsetX = e.touches[0].clientX - root.offsetLeft;
-      offsetY = e.touches[0].clientY - root.offsetTop;
-    };
+      const t = e.touches[0];
+      offsetX = t.clientX - root.offsetLeft;
+      offsetY = t.clientY - root.offsetTop;
+      e.preventDefault();
+    }, { passive: false });
 
-    document.ontouchmove = (e) => {
-      if (isDrag) {
-        root.style.left = (e.touches[0].clientX - offsetX) + "px";
-        root.style.top = (e.touches[0].clientY - offsetY) + "px";
-      }
-    };
+    document.addEventListener('touchmove', (e) => {
+      if (!isDrag) return;
+      const t = e.touches[0];
+      root.style.left = (t.clientX - offsetX) + "px";
+      root.style.top = (t.clientY - offsetY) + "px";
+    });
 
-    document.ontouchend = () => isDrag = false;
+    document.addEventListener('touchend', () => {
+      isDrag = false;
+    });
 
     // ===== CONSOLE =====
     const oldLog = console.log;
@@ -130,7 +152,6 @@
     console.log("Ralzz DevTools aktif 🚀");
   }
 
-  // ===== WAIT DOM =====
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
