@@ -72,7 +72,7 @@
 
     // ===== FLOAT BUTTON =====
     const toggle = document.createElement('div');
-    toggle.innerText = "DEV";
+    toggle.innerText = "RalzzDev";
     toggle.style.all = "initial";
     toggle.style.position = "fixed";
     toggle.style.bottom = "20px";
