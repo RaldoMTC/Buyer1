@@ -4,7 +4,7 @@
     window.__RALZZ_DEVTOOLS__ = true;
 
     // ===== ROOT =====
-    const root = document.createElement('DarkSilent');
+    const root = document.createElement('div');
     root.style.all = "initial";
     root.style.position = "fixed";
     root.style.top = "60px";
